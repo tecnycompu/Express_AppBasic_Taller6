@@ -1,5 +1,6 @@
 // Importa las librerías necesarias
 const express = require('express');
+const session = require('express-session');
 const path = require('path');
 const bodyParser = require('body-parser');
 const multer = require('multer');
@@ -17,6 +18,49 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 // Middleware para manejar archivos estáticos
 app.use(express.static(path.join(__dirname, 'public')));
+
+
+
+
+// Configuración de express-session
+app.use(session({
+  secret: 'secret', 
+  resave: true,
+  saveUninitialized: true
+}));
+
+// Middleware para manejar datos del formulario
+app.use(bodyParser.urlencoded({ extended: true }));
+
+// Ruta para la página de inicio de sesión
+app.get('/login', (req, res) => {
+  res.sendFile(__dirname + '/login.html');
+});
+
+// Ruta para manejar la autenticación del usuario
+app.post('/login', (req, res) => {
+  const { username, password } = req.body;
+  // Verificar las credenciales (datos de ejemplo )
+  if (username === 'admin' && password === '123456') {
+    req.session.loggedIn = true; 
+    res.redirect('/dashboard');
+  } else {
+    res.send('Credenciales incorrectas'); 
+  }
+});
+
+// Ruta protegida que requiere inicio de sesión
+app.get('/dashboard', (req, res) => {
+  if (req.session.loggedIn) {
+    res.send('¡Bienvenido al Módulo de Administración!'); 
+  } else {
+    res.redirect('/login'); 
+  }
+});
+
+
+
+
 
 // Configuración de CORS
 app.use(cors());

@@ -22,6 +22,10 @@ To deploy this project run
   node app.js
   
   http://localhost:3000
+
+  Login de prueba credenciales:
+  usuario: admin
+  contraseña: 123456
 ```
 
 

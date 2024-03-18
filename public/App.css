@@ -8,6 +8,7 @@ body {
   background-color: #f0f0f0; 
 }
 
+/* Ajuste del contenido principal */
 .container {
   max-width: 800px;
   width: 100%;
@@ -15,6 +16,7 @@ body {
   background-color: #fff; 
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+  margin-top: 60px; /* Añade un margen superior para evitar la superposición con el navbar */
 }
 
 /* Estilos para el cuerpo de la página */
@@ -108,4 +110,38 @@ h1.App-header {
 
 .contact-form button:hover {
   background-color: #0056b3;
+}
+
+
+/* Estilos para el navbar */
+nav {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  position: fixed; /* Asegura que el navbar se mantenga fijo en la parte superior */
+  width: 100%; /* Ocupa todo el ancho de la página */
+  top: 0; /* Se fija en la parte superior */
+  left: 0; /* Se alinea a la izquierda */
+  z-index: 1000; /* Asegura que esté por encima de otros elementos */
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  display: inline;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px;
+}
+
+nav ul li a:hover {
+  background-color: #555;
+  border-radius: 5px;
 }

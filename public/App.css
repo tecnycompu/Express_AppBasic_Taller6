@@ -1,0 +1,111 @@
+
+/* App.css */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0; 
+}
+
+.container {
+  max-width: 800px;
+  width: 100%;
+  padding: 20px;
+  background-color: #fff; 
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+}
+
+/* Estilos para el cuerpo de la página */
+body.App {
+  font-family: Arial, sans-serif;
+}
+
+
+/* Estilos para el encabezado */
+h1.App-header {
+  background-color: #282c34;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Estilos para el contenedor de formularios */
+.Form-container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Estilos para los formularios */
+.Form-container form {
+  margin-bottom: 20px;
+}
+
+.Form-container h2 {
+  margin-bottom: 10px;
+}
+
+.Form-container input[type="file"] {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.Form-container button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.Form-container button:hover {
+  background-color: #0056b3;
+}
+
+/* Estilos para el formulario de contacto */
+
+.contact-container {
+  max-width: 600px;
+  width: 100%;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+}
+
+.contact-form {
+  max-width: 500px;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.contact-form button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background-color: #0056b3;
+}

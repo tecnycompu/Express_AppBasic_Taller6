@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/App.css" />
+    <!-- Enlazar el archivo CSS -->
+    <title><%= title %></title>
+  </head>
+  <body>
+    <div class="container">
+
+      <h1 class="App-header"><%= title %></h1>
+
+      <div class="Form-container">
+        <h2>Subir una imagen</h2>
+        <form
+          action="/upload/image"
+          method="post"
+          enctype="multipart/form-data"
+        >
+          <input type="file" name="image" />
+          <button type="submit">Subir imagen</button>
+        </form>
+
+        <h2>Subir un archivo</h2>
+        <form action="/upload/file" method="post" enctype="multipart/form-data">
+          <input type="file" name="file" />
+          <button type="submit">Subir archivo</button>
+        </form>
+
+        <h2>Subir múltiples archivos</h2>
+        <form
+          action="/upload/multi"
+          method="post"
+          enctype="multipart/form-data"
+        >
+          <input type="file" name="files" multiple />
+          <button type="submit">Subir archivos</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

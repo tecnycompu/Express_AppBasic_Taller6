@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../App.css">
+  <title>Upload Forms</title>
+</head>
+<body>
+  <h1>Subir una imagen</h1>
+  <form action="/upload/image" method="post" enctype="multipart/form-data">
+    <input type="file" name="image">
+    <button type="submit">Subir imagen</button>
+  </form>
+
+  <h1>Subir un archivo</h1>
+  <form action="/upload/file" method="post" enctype="multipart/form-data">
+    <input type="file" name="file">
+    <button type="submit">Subir archivo</button>
+  </form>
+
+  <h1>Subir múltiples archivos</h1>
+  <form action="/upload/multi" method="post" enctype="multipart/form-data">
+    <input type="file" name="files" multiple>
+    <button type="submit">Subir archivos</button>
+  </form>
+</body>
+</html>
